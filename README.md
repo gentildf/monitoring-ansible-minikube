@@ -59,10 +59,6 @@ monitoring-ansible-minikube/
 
 Sinta-se à vontade para enviar pull requests ou abrir issues para reportar problemas ou sugerir melhorias.
 
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
-
 ---
 
-Agora você tem um novo projeto configurado para subir um ambiente de monitoramento no Minikube usando Ansible. Quando estiver pronto para começar, pode pedir mais detalhes ou ajustes!
+Agora você tem um novo projeto configurado para subir um ambiente de monitoramento no Minikube usando Ansible. 
