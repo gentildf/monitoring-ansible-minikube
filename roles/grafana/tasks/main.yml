@@ -1,0 +1,19 @@
+- name: Adicionar repositório Helm do Grafana
+  shell: |
+    helm repo add grafana https://grafana.github.io/helm-charts
+    helm repo update
+
+- name: Instalar Grafana
+  shell: |
+    helm install grafana grafana/grafana --namespace monitoring
+  args:
+    creates: /usr/local/bin/helm
+
+- name: Obter senha admin do Grafana
+  shell: |
+    kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+  register: grafana_admin_password
+
+- name: Exibir senha do Grafana
+  debug:
+    msg: "A senha de admin do Grafana é: {{ grafana_admin_password.stdout }}"

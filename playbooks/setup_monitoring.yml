@@ -1,0 +1,7 @@
+- name: Config env de monitoramento no minikube
+  hosts: all
+  become: yes
+  roles:
+    - common
+    - prometheus
+    - grafana
